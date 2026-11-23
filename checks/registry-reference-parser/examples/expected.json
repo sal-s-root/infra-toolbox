@@ -1,0 +1,5 @@
+{
+  "repository": "registry.example.test:5000/team/api",
+  "tag": "1.2",
+  "digest": null
+}

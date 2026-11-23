@@ -1,0 +1,14 @@
+{
+  "resources": [
+    {
+      "id": "instance-a",
+      "average_cpu_percent": 2,
+      "observation_hours": 200
+    },
+    {
+      "id": "instance-b",
+      "average_cpu_percent": 1,
+      "observation_hours": 2
+    }
+  ]
+}

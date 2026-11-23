@@ -1,0 +1,9 @@
+{
+  "files": [
+    {
+      "path": "config",
+      "mode": "0666",
+      "allowed_mode": "0640"
+    }
+  ]
+}

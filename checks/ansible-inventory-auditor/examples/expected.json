@@ -1,0 +1,8 @@
+{
+  "ungrouped_hosts": [
+    "db1"
+  ],
+  "unknown_group_members": [
+    "old1"
+  ]
+}

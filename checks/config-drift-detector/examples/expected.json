@@ -1,0 +1,14 @@
+{
+  "missing": [
+    "mode"
+  ],
+  "extra": [],
+  "changed": [
+    {
+      "key": "port",
+      "expected": 8080,
+      "actual": 9090
+    }
+  ],
+  "in_sync": false
+}

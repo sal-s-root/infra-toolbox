@@ -1,0 +1,9 @@
+{
+  "issues": [
+    {
+      "name": "api.example.test",
+      "issue": "invalid-address-family"
+    }
+  ],
+  "valid": false
+}

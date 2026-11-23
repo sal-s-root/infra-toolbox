@@ -1,0 +1,13 @@
+{
+  "plans": [
+    {
+      "volume_id": "vol-a",
+      "retain": [
+        "snap-2"
+      ],
+      "candidates_for_review": [
+        "snap-1"
+      ]
+    }
+  ]
+}

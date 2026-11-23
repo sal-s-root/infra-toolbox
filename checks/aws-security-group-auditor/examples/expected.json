@@ -1,0 +1,11 @@
+{
+  "findings": [
+    {
+      "group_id": "sg-example",
+      "reason": "public-administration-or-all-protocols",
+      "ports": [
+        22
+      ]
+    }
+  ]
+}

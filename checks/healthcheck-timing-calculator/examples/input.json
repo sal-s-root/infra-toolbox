@@ -1,0 +1,6 @@
+{
+  "interval_seconds": 10,
+  "timeout_seconds": 2,
+  "start_period_seconds": 5,
+  "retries": 3
+}

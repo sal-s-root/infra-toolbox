@@ -1,0 +1,9 @@
+{
+  "required": [
+    "APP_PORT",
+    "DB_PASSWORD"
+  ],
+  "environment": {
+    "APP_PORT": "8080"
+  }
+}

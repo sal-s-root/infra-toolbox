@@ -1,0 +1,16 @@
+{
+  "objective_percent": 99.9,
+  "burn_threshold": 10,
+  "windows": [
+    {
+      "name": "short",
+      "requests": 1000,
+      "errors": 20
+    },
+    {
+      "name": "long",
+      "requests": 10000,
+      "errors": 100
+    }
+  ]
+}

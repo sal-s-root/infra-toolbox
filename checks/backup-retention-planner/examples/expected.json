@@ -1,0 +1,8 @@
+{
+  "retain": [
+    "newer"
+  ],
+  "candidates_for_review": [
+    "older"
+  ]
+}

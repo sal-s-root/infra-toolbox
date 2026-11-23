@@ -1,0 +1,16 @@
+{
+  "findings": [
+    {
+      "path": ".env",
+      "patterns": [
+        ".env"
+      ]
+    },
+    {
+      "path": "keys/service.pem",
+      "patterns": [
+        "*.pem"
+      ]
+    }
+  ]
+}

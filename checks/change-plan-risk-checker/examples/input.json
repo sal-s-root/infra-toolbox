@@ -1,0 +1,12 @@
+{
+  "changes": [
+    {
+      "resource": "database",
+      "actions": [
+        "delete",
+        "create"
+      ],
+      "stateful": true
+    }
+  ]
+}

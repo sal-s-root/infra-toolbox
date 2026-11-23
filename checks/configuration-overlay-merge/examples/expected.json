@@ -1,0 +1,11 @@
+{
+  "configuration": {
+    "api": {
+      "port": 8080,
+      "workers": 4
+    },
+    "zones": [
+      "b"
+    ]
+  }
+}

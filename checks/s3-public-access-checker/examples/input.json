@@ -1,0 +1,12 @@
+{
+  "buckets": [
+    {
+      "name": "example-bucket",
+      "public_access_block": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true
+      }
+    }
+  ]
+}

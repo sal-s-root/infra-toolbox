@@ -1,0 +1,6 @@
+{
+  "missing_or_empty": [
+    "DB_PASSWORD"
+  ],
+  "complete": false
+}

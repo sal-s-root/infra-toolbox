@@ -1,0 +1,7 @@
+{
+  "failed_service": "db",
+  "potentially_affected": [
+    "api",
+    "web"
+  ]
+}

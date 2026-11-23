@@ -1,0 +1,11 @@
+{
+  "jobs": {
+    "test": [],
+    "build": [
+      "test"
+    ],
+    "deploy": [
+      "build"
+    ]
+  }
+}

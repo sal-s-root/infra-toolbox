@@ -1,0 +1,11 @@
+{
+  "findings": [
+    {
+      "statement": "Broad",
+      "wildcard_actions": [
+        "s3:*"
+      ],
+      "all_resources": true
+    }
+  ]
+}

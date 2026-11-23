@@ -1,0 +1,14 @@
+{
+  "compare_keys": [
+    "WORKERS",
+    "MODE"
+  ],
+  "left": {
+    "WORKERS": "2",
+    "MODE": "safe"
+  },
+  "right": {
+    "WORKERS": "4",
+    "MODE": "safe"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "findings": [
+    {
+      "task": "configure service",
+      "missing_tags": [
+        "baseline"
+      ]
+    }
+  ],
+  "all_tagged": false
+}

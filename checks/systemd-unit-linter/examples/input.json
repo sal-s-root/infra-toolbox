@@ -1,0 +1,3 @@
+{
+  "unit": "[Service]\nExecStart=/usr/local/bin/app\nUser=app\nRestart=on-failure\n"
+}

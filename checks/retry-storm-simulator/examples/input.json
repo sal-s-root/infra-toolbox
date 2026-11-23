@@ -1,0 +1,5 @@
+{
+  "clients": 100,
+  "requests_per_client": 10,
+  "retries": 3
+}

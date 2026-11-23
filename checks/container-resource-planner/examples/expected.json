@@ -1,0 +1,5 @@
+{
+  "requested_cpu": 1.5,
+  "requested_memory_mib": 384.0,
+  "fits": true
+}

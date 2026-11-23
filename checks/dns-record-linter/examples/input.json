@@ -1,0 +1,10 @@
+{
+  "records": [
+    {
+      "name": "api.example.test",
+      "type": "A",
+      "value": "::1",
+      "ttl": 60
+    }
+  ]
+}

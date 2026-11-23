@@ -1,0 +1,13 @@
+{
+  "target_seconds": 300,
+  "drills": [
+    {
+      "name": "example-restore-a",
+      "duration_seconds": 240
+    },
+    {
+      "name": "example-restore-b",
+      "duration_seconds": 360
+    }
+  ]
+}

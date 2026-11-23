@@ -1,0 +1,12 @@
+{
+  "directories": [
+    {
+      "directory": ".",
+      "bytes": 5
+    },
+    {
+      "directory": "logs",
+      "bytes": 30
+    }
+  ]
+}

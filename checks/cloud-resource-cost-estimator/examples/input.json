@@ -1,0 +1,10 @@
+{
+  "resources": [
+    {
+      "name": "lab-compute",
+      "quantity": 2,
+      "hours": 10,
+      "hourly_rate": 0.1
+    }
+  ]
+}

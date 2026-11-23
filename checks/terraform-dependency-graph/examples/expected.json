@@ -1,0 +1,11 @@
+{
+  "dependents": {
+    "instance": [],
+    "subnet": [
+      "instance"
+    ],
+    "vpc": [
+      "subnet"
+    ]
+  }
+}

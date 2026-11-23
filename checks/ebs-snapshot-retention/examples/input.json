@@ -1,0 +1,15 @@
+{
+  "keep_per_volume": 1,
+  "snapshots": [
+    {
+      "volume_id": "vol-a",
+      "id": "snap-1",
+      "started_at": "2024-01-01T00:00:00Z"
+    },
+    {
+      "volume_id": "vol-a",
+      "id": "snap-2",
+      "started_at": "2024-01-02T00:00:00Z"
+    }
+  ]
+}

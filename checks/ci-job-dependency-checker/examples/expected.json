@@ -1,0 +1,13 @@
+{
+  "execution_levels": [
+    [
+      "test"
+    ],
+    [
+      "build"
+    ],
+    [
+      "deploy"
+    ]
+  ]
+}

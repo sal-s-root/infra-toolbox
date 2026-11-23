@@ -1,0 +1,9 @@
+{
+  "services": [
+    {
+      "name": "api",
+      "version": "1.2",
+      "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ]
+}

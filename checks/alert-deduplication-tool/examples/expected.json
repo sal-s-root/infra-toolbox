@@ -1,0 +1,14 @@
+{
+  "groups": [
+    {
+      "identity": {
+        "alertname": "HighErrors",
+        "service": "api"
+      },
+      "alert_ids": [
+        "a",
+        "b"
+      ]
+    }
+  ]
+}

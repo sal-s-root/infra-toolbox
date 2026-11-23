@@ -1,0 +1,13 @@
+{
+  "destructive_changes": [
+    {
+      "address": "aws_db_instance.main",
+      "replacement": true,
+      "actions": [
+        "delete",
+        "create"
+      ]
+    }
+  ],
+  "requires_review": true
+}

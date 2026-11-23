@@ -1,0 +1,24 @@
+{
+  "identity_labels": [
+    "service",
+    "alertname"
+  ],
+  "alerts": [
+    {
+      "id": "a",
+      "labels": {
+        "service": "api",
+        "alertname": "HighErrors",
+        "pod": "1"
+      }
+    },
+    {
+      "id": "b",
+      "labels": {
+        "service": "api",
+        "alertname": "HighErrors",
+        "pod": "2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "quotas": [
+    {
+      "name": "vpcs",
+      "used": 4,
+      "limit": 5,
+      "planned_addition": 2
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "original_requests": 1000,
+  "worst_case_attempts": 4000,
+  "extra_attempts": 3000,
+  "amplification_factor": 4
+}

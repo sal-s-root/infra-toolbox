@@ -1,0 +1,17 @@
+{
+  "as_of": "2025-05-10",
+  "actions": [
+    {
+      "id": "EXERCISE-1",
+      "status": "open",
+      "owner": "",
+      "due": "2025-05-01"
+    },
+    {
+      "id": "EXERCISE-2",
+      "status": "done",
+      "owner": "platform",
+      "due": "2025-04-01"
+    }
+  ]
+}

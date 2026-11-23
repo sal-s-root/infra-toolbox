@@ -1,0 +1,15 @@
+{
+  "max_latency_ms": 100,
+  "checks": [
+    {
+      "name": "database",
+      "ok": true,
+      "latency_ms": 150
+    },
+    {
+      "name": "cache",
+      "ok": true,
+      "latency_ms": 5
+    }
+  ]
+}

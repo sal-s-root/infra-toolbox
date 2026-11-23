@@ -1,0 +1,9 @@
+{
+  "expected": {
+    "a": "abc",
+    "b": "def"
+  },
+  "observed": {
+    "a": "changed"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label_value_counts": {
+    "method": 2,
+    "route": 3
+  },
+  "maximum_label_combinations": 6,
+  "estimated_series_upper_bound": 12
+}

@@ -1,0 +1,12 @@
+{
+  "certificates": [
+    {
+      "name": "api",
+      "owner": "platform"
+    },
+    {
+      "name": "old-service",
+      "owner": ""
+    }
+  ]
+}

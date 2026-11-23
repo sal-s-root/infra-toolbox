@@ -1,0 +1,13 @@
+{
+  "keep_latest": 1,
+  "backups": [
+    {
+      "id": "older",
+      "created_at": "2022-01-01T00:00:00Z"
+    },
+    {
+      "id": "newer",
+      "created_at": "2022-01-02T00:00:00Z"
+    }
+  ]
+}

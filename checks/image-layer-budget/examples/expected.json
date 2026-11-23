@@ -1,0 +1,6 @@
+{
+  "total_bytes": 400,
+  "largest_layer_bytes": 250,
+  "over_budget_bytes": 50,
+  "within_budget": false
+}

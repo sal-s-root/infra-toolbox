@@ -1,0 +1,9 @@
+{
+  "images": [
+    {
+      "image": "example.test/team/app:1.2",
+      "digest_pinned": false
+    }
+  ],
+  "all_digest_pinned": false
+}

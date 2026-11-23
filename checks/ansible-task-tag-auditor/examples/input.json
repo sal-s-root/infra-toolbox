@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    {
+      "name": "install tools",
+      "tags": [
+        "baseline"
+      ]
+    },
+    {
+      "name": "configure service",
+      "tags": []
+    }
+  ]
+}

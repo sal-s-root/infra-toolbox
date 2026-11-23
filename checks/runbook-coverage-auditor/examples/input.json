@@ -1,0 +1,14 @@
+{
+  "services": [
+    {
+      "name": "api",
+      "owner": "platform",
+      "runbook": "https://example.test/runbook"
+    },
+    {
+      "name": "worker",
+      "owner": "",
+      "runbook": ""
+    }
+  ]
+}

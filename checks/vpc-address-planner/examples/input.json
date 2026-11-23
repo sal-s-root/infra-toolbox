@@ -1,0 +1,5 @@
+{
+  "parent_cidr": "10.10.0.0/16",
+  "subnet_prefix": 24,
+  "count": 2
+}

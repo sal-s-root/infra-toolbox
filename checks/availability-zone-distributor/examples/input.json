@@ -1,0 +1,8 @@
+{
+  "zones": [
+    "zone-c",
+    "zone-a",
+    "zone-b"
+  ],
+  "replicas": 5
+}

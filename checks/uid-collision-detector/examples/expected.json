@@ -1,0 +1,11 @@
+{
+  "collisions": [
+    {
+      "uid": 0,
+      "users": [
+        "admin",
+        "root"
+      ]
+    }
+  ]
+}

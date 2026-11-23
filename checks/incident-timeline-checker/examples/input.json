@@ -1,0 +1,12 @@
+{
+  "events": [
+    {
+      "at": "2025-01-01T00:00:00Z",
+      "event": "drill-start"
+    },
+    {
+      "at": "2025-01-01T00:05:00Z",
+      "event": "drill-recovered"
+    }
+  ]
+}

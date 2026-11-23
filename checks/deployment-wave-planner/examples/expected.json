@@ -1,0 +1,12 @@
+{
+  "waves": [
+    [
+      "db-migration",
+      "api-canary"
+    ],
+    [
+      "api-main",
+      "worker"
+    ]
+  ]
+}

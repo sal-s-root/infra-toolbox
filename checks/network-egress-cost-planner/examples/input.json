@@ -1,0 +1,9 @@
+{
+  "flows": [
+    {
+      "name": "internet-egress",
+      "gigabytes": 100,
+      "price_per_gigabyte": 0.09
+    }
+  ]
+}

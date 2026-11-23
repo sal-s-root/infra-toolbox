@@ -1,0 +1,11 @@
+{
+  "resources": [
+    {
+      "id": "vpc-example",
+      "tags": {
+        "Owner": "platform",
+        "Environment": "lab"
+      }
+    }
+  ]
+}

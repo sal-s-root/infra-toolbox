@@ -1,0 +1,11 @@
+{
+  "buckets": [
+    {
+      "bucket": "example-bucket",
+      "disabled_or_missing": [
+        "RestrictPublicBuckets"
+      ],
+      "all_enabled": false
+    }
+  ]
+}

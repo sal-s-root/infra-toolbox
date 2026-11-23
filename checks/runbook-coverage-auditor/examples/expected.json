@@ -1,0 +1,13 @@
+{
+  "findings": [
+    {
+      "service": "worker",
+      "missing": [
+        "owner",
+        "runbook"
+      ]
+    }
+  ],
+  "covered": 1,
+  "total": 2
+}

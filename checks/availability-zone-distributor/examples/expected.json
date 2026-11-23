@@ -1,0 +1,8 @@
+{
+  "allocations": {
+    "zone-a": 2,
+    "zone-b": 2,
+    "zone-c": 1
+  },
+  "replicas": 5
+}

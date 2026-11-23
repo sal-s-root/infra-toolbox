@@ -1,0 +1,6 @@
+{
+  "forecast": 300.0,
+  "budget": 250.0,
+  "forecast_over_budget": true,
+  "daily_average": 10.0
+}

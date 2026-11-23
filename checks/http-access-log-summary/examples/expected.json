@@ -1,0 +1,11 @@
+{
+  "status_classes": {
+    "2xx": 1,
+    "5xx": 1
+  },
+  "routes": {
+    "/api": 1,
+    "/healthz": 1
+  },
+  "requests": 2
+}

@@ -1,0 +1,9 @@
+{
+  "environment": "lab",
+  "owner": "platform",
+  "stop_conditions": [
+    "error-rate-over-1-percent"
+  ],
+  "blast_radius_percent": 5,
+  "rollback": "restore test service"
+}

@@ -1,0 +1,10 @@
+{
+  "quotas": [
+    {
+      "name": "vpcs",
+      "headroom": 1.0,
+      "usage_percent": 80.0,
+      "planned_fits": false
+    }
+  ]
+}

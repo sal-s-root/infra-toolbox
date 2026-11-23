@@ -1,0 +1,3 @@
+{
+  "dockerfile": "FROM python:3.11-alpine\nUSER 10001\nHEALTHCHECK CMD true\n"
+}

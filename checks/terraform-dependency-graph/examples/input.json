@@ -1,0 +1,11 @@
+{
+  "resources": {
+    "vpc": [],
+    "subnet": [
+      "vpc"
+    ],
+    "instance": [
+      "subnet"
+    ]
+  }
+}

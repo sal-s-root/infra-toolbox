@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "directive": "PasswordAuthentication",
+      "expected": "no",
+      "observed": "yes"
+    }
+  ],
+  "matches_policy": false
+}

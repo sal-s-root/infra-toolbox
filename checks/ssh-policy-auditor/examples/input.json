@@ -1,0 +1,7 @@
+{
+  "config": "PermitRootLogin no\nPasswordAuthentication yes",
+  "expected": {
+    "PermitRootLogin": "no",
+    "PasswordAuthentication": "no"
+  }
+}

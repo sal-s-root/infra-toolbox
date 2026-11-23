@@ -1,0 +1,11 @@
+{
+  "differences": [
+    {
+      "key": "WORKERS",
+      "left_present": true,
+      "right_present": true,
+      "equal": false
+    }
+  ],
+  "matching": false
+}

@@ -1,0 +1,6 @@
+{
+  "ready": false,
+  "failed_checks": [
+    "database"
+  ]
+}

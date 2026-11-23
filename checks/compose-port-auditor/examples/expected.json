@@ -1,0 +1,9 @@
+{
+  "findings": [
+    {
+      "service": "api",
+      "published": "8080",
+      "issue": "wildcard-host-binding"
+    }
+  ]
+}

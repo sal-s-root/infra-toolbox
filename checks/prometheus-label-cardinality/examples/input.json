@@ -1,0 +1,14 @@
+{
+  "labels": {
+    "method": [
+      "GET",
+      "POST"
+    ],
+    "route": [
+      "/a",
+      "/b",
+      "/c"
+    ]
+  },
+  "replicas": 2
+}

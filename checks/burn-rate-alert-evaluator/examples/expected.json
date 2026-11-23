@@ -1,0 +1,15 @@
+{
+  "windows": [
+    {
+      "name": "short",
+      "burn_rate": 20.0,
+      "above_threshold": true
+    },
+    {
+      "name": "long",
+      "burn_rate": 10.0,
+      "above_threshold": true
+    }
+  ],
+  "alert": true
+}

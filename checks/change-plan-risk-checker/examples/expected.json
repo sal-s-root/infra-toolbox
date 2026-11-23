@@ -1,0 +1,9 @@
+{
+  "requires_review": true,
+  "findings": [
+    {
+      "resource": "database",
+      "reason": "stateful-deletion-or-replacement"
+    }
+  ]
+}

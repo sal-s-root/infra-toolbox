@@ -1,0 +1,12 @@
+{
+  "rules": [
+    {
+      "alert": "HighErrors",
+      "expr": "rate(errors_total[5m]) > 1",
+      "for": "5m",
+      "labels": {
+        "team": "platform"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "path": "logs/a",
+      "bytes": 10
+    },
+    {
+      "path": "logs/b",
+      "bytes": 20
+    },
+    {
+      "path": "readme",
+      "bytes": 5
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "wave_size": 2,
+  "ordered_services": [
+    "db-migration",
+    "api-canary",
+    "api-main",
+    "worker"
+  ]
+}

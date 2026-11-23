@@ -1,0 +1,560 @@
+[
+  {
+    "name": "linux-permission-inspector",
+    "area": "linux",
+    "purpose": "Decode Unix permission bits and flag world-writable files.",
+    "limitations": "Decodes supplied metadata; does not inspect ACLs, ownership, or effective permissions."
+  },
+  {
+    "name": "disk-capacity-planner",
+    "area": "linux",
+    "purpose": "Calculate filesystem capacity headroom before a maintenance change.",
+    "limitations": "Uses a static snapshot; filesystem reserved blocks and growth rates are not collected."
+  },
+  {
+    "name": "memory-pressure-checker",
+    "area": "linux",
+    "purpose": "Summarize a Linux meminfo snapshot without confusing cached memory with unavailable memory.",
+    "limitations": "Accepts Linux meminfo text; pressure percentage is a capacity indicator, not Linux PSI."
+  },
+  {
+    "name": "process-snapshot-sorter",
+    "area": "linux",
+    "purpose": "Rank a supplied process snapshot by CPU consumption.",
+    "limitations": "Does not sample live processes; CPU percentages depend on the upstream collection interval."
+  },
+  {
+    "name": "inode-usage-checker",
+    "area": "linux",
+    "purpose": "Identify inode exhaustion separately from byte capacity.",
+    "limitations": "Filesystems without a fixed inode capacity require different interpretation."
+  },
+  {
+    "name": "mount-option-auditor",
+    "area": "linux",
+    "purpose": "Compare mount options with an explicit expected hardening policy.",
+    "limitations": "Policy is supplied per mount; applying noexec or other flags can break applications and is not performed."
+  },
+  {
+    "name": "path-entry-auditor",
+    "area": "linux",
+    "purpose": "Detect PATH entries that depend on the working directory.",
+    "limitations": "Does not check directory ownership, symlinks, or write permissions."
+  },
+  {
+    "name": "system-load-analyzer",
+    "area": "linux",
+    "purpose": "Normalize load averages against a supplied CPU count.",
+    "limitations": "Linux load includes uninterruptible tasks; this is not a CPU utilization measurement."
+  },
+  {
+    "name": "uid-collision-detector",
+    "area": "linux",
+    "purpose": "Find account names sharing a numeric UID in passwd-format data.",
+    "limitations": "Some shared UIDs are intentional; review identity sources and policy before changing accounts."
+  },
+  {
+    "name": "file-integrity-manifest",
+    "area": "linux",
+    "purpose": "Generate deterministic SHA-256 hashes for supplied text file contents.",
+    "limitations": "UTF-8 text input only; hashes prove content equality, not authenticity or trusted provenance."
+  },
+  {
+    "name": "log-level-counter",
+    "area": "linux",
+    "purpose": "Count explicit severity tokens in text logs.",
+    "limitations": "Matches the first uppercase token; structured logging avoids ambiguous text classification."
+  },
+  {
+    "name": "cron-field-validator",
+    "area": "linux",
+    "purpose": "Validate a deliberately restricted five-field cron schedule.",
+    "limitations": "Does not support ranges, steps, lists, macros, timezone semantics, or calendar feasibility."
+  },
+  {
+    "name": "directory-size-summary",
+    "area": "linux",
+    "purpose": "Group collected file sizes by top-level relative directory.",
+    "limitations": "Uses a supplied file inventory; sparse allocation, hard links, and compression are not modeled."
+  },
+  {
+    "name": "environment-variable-auditor",
+    "area": "linux",
+    "purpose": "Check required environment variable names without printing secret values.",
+    "limitations": "Input may contain secrets; use protected files and avoid recording request bodies."
+  },
+  {
+    "name": "service-port-inventory",
+    "area": "linux",
+    "purpose": "Find services that claim the same transport protocol and port.",
+    "limitations": "Binding conflicts also depend on addresses, namespaces, and reuse settings; these are not modeled."
+  },
+  {
+    "name": "cidr-overlap-checker",
+    "area": "networking",
+    "purpose": "Find overlapping IP networks in a proposed address inventory.",
+    "limitations": "Compares CIDRs only; does not read routes, peering relationships, or cloud accounts."
+  },
+  {
+    "name": "subnet-capacity-calculator",
+    "area": "networking",
+    "purpose": "Calculate IPv4 address capacity with explicit provider reservations.",
+    "limitations": "Reservation count is user supplied; point-to-point and provider-specific rules differ."
+  },
+  {
+    "name": "dns-record-linter",
+    "area": "networking",
+    "purpose": "Validate a small DNS inventory for address family and TTL consistency.",
+    "limitations": "Does not resolve DNS or validate CNAME coexistence, DNSSEC, TXT data, or authority."
+  },
+  {
+    "name": "http-access-log-summary",
+    "area": "networking",
+    "purpose": "Summarize structured HTTP request records by status class and route.",
+    "limitations": "Consumes normalized records, not raw combined-log-format lines; route cardinality must be controlled."
+  },
+  {
+    "name": "tls-expiry-planner",
+    "area": "networking",
+    "purpose": "Calculate a certificate renewal deadline relative to an explicit evaluation time.",
+    "limitations": "Uses supplied expiry metadata; does not perform a TLS handshake or inspect certificate trust."
+  },
+  {
+    "name": "latency-percentile-calculator",
+    "area": "networking",
+    "purpose": "Compute nearest-rank latency percentiles from observed samples.",
+    "limitations": "Nearest-rank estimates from small samples are coarse; do not average these percentiles across hosts."
+  },
+  {
+    "name": "tcp-retry-budget",
+    "area": "networking",
+    "purpose": "Estimate the maximum configured connection-attempt time including exponential retry delays.",
+    "limitations": "A model rather than a network probe; excludes DNS, scheduling, jitter, and application processing."
+  },
+  {
+    "name": "route-longest-prefix",
+    "area": "networking",
+    "purpose": "Select the most specific matching route for an IP destination.",
+    "limitations": "Does not model metrics, policy routing, equal-cost multipath, or interface state."
+  },
+  {
+    "name": "nginx-upstream-checker",
+    "area": "networking",
+    "purpose": "Review a normalized upstream pool for duplicate endpoints and traffic weights.",
+    "limitations": "Reads normalized JSON, not nginx syntax; failover, max_fails, and passive health behavior are outside scope."
+  },
+  {
+    "name": "ip-allowlist-evaluator",
+    "area": "networking",
+    "purpose": "Evaluate whether supplied client addresses belong to an explicit CIDR allowlist.",
+    "limitations": "An offline membership check; it does not configure a firewall or establish client identity."
+  },
+  {
+    "name": "port-range-merger",
+    "area": "networking",
+    "purpose": "Collapse overlapping or adjacent port ranges into a minimal equivalent list.",
+    "limitations": "Merge only ranges with the same protocol, direction, and policy action."
+  },
+  {
+    "name": "url-health-manifest",
+    "area": "networking",
+    "purpose": "Review health-check URLs for schemes, embedded credentials, and duplicates.",
+    "limitations": "Does not make requests or resolve hosts. A syntactically valid URL is not necessarily reachable or trusted."
+  },
+  {
+    "name": "json-log-filter",
+    "area": "networking",
+    "purpose": "Filter JSON log records with exact field matching and a bounded result count.",
+    "limitations": "In-memory exact matching only; input and output logs may contain sensitive information."
+  },
+  {
+    "name": "syslog-severity-summary",
+    "area": "networking",
+    "purpose": "Decode syslog priority numbers into facility and severity counts.",
+    "limitations": "Uses numeric syslog priority values; does not parse timestamps, hostnames, or transport framing."
+  },
+  {
+    "name": "network-throughput-estimator",
+    "area": "networking",
+    "purpose": "Calculate observed bit rate from cumulative byte counters.",
+    "limitations": "Assumes one monotonic counter without wraparound; reported rate depends on sampling accuracy."
+  },
+  {
+    "name": "http-status-budget",
+    "area": "networking",
+    "purpose": "Calculate a request failure ratio using an explicit server-error classification.",
+    "limitations": "Counts only 5xx as failures; service-specific availability may classify timeouts and some 4xx differently."
+  },
+  {
+    "name": "config-drift-detector",
+    "area": "configuration",
+    "purpose": "Compare desired and observed configuration values without modifying hosts.",
+    "limitations": "Compares top-level keys; values may contain secrets, so review input and output handling."
+  },
+  {
+    "name": "backup-retention-planner",
+    "area": "configuration",
+    "purpose": "Select dated backups to retain under a count-based policy.",
+    "limitations": "Produces a plan only; backup chains, legal retention, immutability, and restore tests require separate checks."
+  },
+  {
+    "name": "rotation-size-planner",
+    "area": "configuration",
+    "purpose": "Estimate storage consumed by rotated logs and an active file.",
+    "limitations": "Assumes equally sized rotations; compression ratios and log growth vary. No files are rotated or removed."
+  },
+  {
+    "name": "ssh-policy-auditor",
+    "area": "configuration",
+    "purpose": "Check selected sshd directives against an explicit expected policy.",
+    "limitations": "A restricted text review; use sshd -T with connection criteria for effective production settings."
+  },
+  {
+    "name": "sudo-policy-linter",
+    "area": "configuration",
+    "purpose": "Flag broad passwordless sudo rules for manual review.",
+    "limitations": "Not a sudoers parser or security proof. Validate syntax with visudo and review aliases and includes separately."
+  },
+  {
+    "name": "ansible-inventory-auditor",
+    "area": "configuration",
+    "purpose": "Find hosts without an owner group in a normalized inventory.",
+    "limitations": "Uses a flat JSON projection; Ansible child groups, patterns, and variable precedence are not evaluated."
+  },
+  {
+    "name": "systemd-unit-linter",
+    "area": "configuration",
+    "purpose": "Review selected service-unit settings for predictable operation.",
+    "limitations": "Restricted INI subset only; repeated directives and systemd override semantics require systemd-analyze verify."
+  },
+  {
+    "name": "package-pin-auditor",
+    "area": "configuration",
+    "purpose": "Find package requirements missing an exact version in a normalized package list.",
+    "limitations": "Checks normalized version strings, not package-manager resolution or vulnerability status."
+  },
+  {
+    "name": "secret-redaction-filter",
+    "area": "configuration",
+    "purpose": "Redact values beneath explicitly sensitive JSON key names.",
+    "limitations": "Exact key matching only; secrets embedded in free text or unexpected fields will remain."
+  },
+  {
+    "name": "configuration-overlay-merge",
+    "area": "configuration",
+    "purpose": "Merge configuration objects with explicit recursive object and replacement-list behavior.",
+    "limitations": "Lists and nulls replace existing values; no schema validation, variable expansion, or secret resolution is performed."
+  },
+  {
+    "name": "backup-manifest-verifier",
+    "area": "configuration",
+    "purpose": "Compare an expected checksum manifest against observed checksum metadata.",
+    "limitations": "Compares supplied checksum strings; it does not independently read backups or validate the trusted manifest."
+  },
+  {
+    "name": "maintenance-window-planner",
+    "area": "configuration",
+    "purpose": "Find conflicting UTC maintenance intervals.",
+    "limitations": "Treats intervals as half-open; does not model recurrence, business calendars, or service dependency exceptions."
+  },
+  {
+    "name": "certificate-inventory-reporter",
+    "area": "configuration",
+    "purpose": "Group certificate inventory entries by owner and identify missing ownership.",
+    "limitations": "Ownership reporting only; issuance, revocation, trust chains, and expiry verification are separate tasks."
+  },
+  {
+    "name": "least-privilege-file-auditor",
+    "area": "configuration",
+    "purpose": "Review file modes against an expected permission ceiling.",
+    "limitations": "Does not evaluate ACLs, capabilities, mount policies, ownership, or required minimum permissions."
+  },
+  {
+    "name": "change-plan-risk-checker",
+    "area": "configuration",
+    "purpose": "Flag destructive changes to stateful resources for review.",
+    "limitations": "A review aid rather than an approval system; statefulness must be identified accurately by the caller."
+  },
+  {
+    "name": "ansible-task-tag-auditor",
+    "area": "configuration",
+    "purpose": "Review normalized Ansible task metadata for operational tags.",
+    "limitations": "Accepts expanded task metadata; does not resolve inherited tags, includes, roles, or special Ansible tags."
+  },
+  {
+    "name": "dockerfile-policy-checker",
+    "area": "delivery",
+    "purpose": "Review a Dockerfile for an explicit runtime user, health check, and base image tag.",
+    "limitations": "A line-oriented review only; it does not resolve build stages, ARGs, inherited health checks, or Dockerfile continuations."
+  },
+  {
+    "name": "compose-port-auditor",
+    "area": "delivery",
+    "purpose": "Find Compose published ports exposed on wildcard addresses.",
+    "limitations": "Uses expanded Compose JSON port objects; host firewall policy and Docker networking still affect reachability."
+  },
+  {
+    "name": "container-resource-planner",
+    "area": "delivery",
+    "purpose": "Compare aggregate container reservations with a host capacity budget.",
+    "limitations": "A sum of supplied reservations; ignores host overhead, noisy neighbors, burst capacity, and placement constraints."
+  },
+  {
+    "name": "image-tag-policy-checker",
+    "area": "delivery",
+    "purpose": "Distinguish digest-pinned images from mutable tags.",
+    "limitations": "Digest syntax does not prove an image exists, is signed, or is free from vulnerabilities."
+  },
+  {
+    "name": "healthcheck-timing-calculator",
+    "area": "delivery",
+    "purpose": "Model failure detection for a stated fixed-start-interval health-check schedule.",
+    "limitations": "An idealized fixed-start schedule; Docker and orchestrators can schedule checks differently, so measure real detection time."
+  },
+  {
+    "name": "ci-job-dependency-checker",
+    "area": "delivery",
+    "purpose": "Topologically group CI jobs and detect unknown dependencies or cycles.",
+    "limitations": "Models static dependencies only; conditions, matrices, reusable workflows, and concurrency controls are not evaluated."
+  },
+  {
+    "name": "artifact-checksum-verifier",
+    "area": "delivery",
+    "purpose": "Verify UTF-8 artifact content against an expected SHA-256 digest.",
+    "limitations": "Text artifacts only; trust in the expected digest must come from a separate authenticated source."
+  },
+  {
+    "name": "build-context-auditor",
+    "area": "delivery",
+    "purpose": "Identify potentially sensitive files in a supplied container build-context inventory.",
+    "limitations": "Uses simple fnmatch rules, not full dockerignore semantics; file content and embedded secrets are not scanned."
+  },
+  {
+    "name": "environment-parity-checker",
+    "area": "delivery",
+    "purpose": "Compare selected configuration keys between two deployment environments.",
+    "limitations": "Does not print values; intentionally different environment settings should be excluded explicitly."
+  },
+  {
+    "name": "deployment-wave-planner",
+    "area": "delivery",
+    "purpose": "Split a defined deployment order into bounded rollout waves.",
+    "limitations": "Uses caller-supplied order; it does not infer dependency safety or perform deployments."
+  },
+  {
+    "name": "container-log-normalizer",
+    "area": "delivery",
+    "purpose": "Normalize selected structured container log fields into a stable record shape.",
+    "limitations": "Consumes JSON records; multiline joining, trace correlation, redaction, and timestamp inference are outside scope."
+  },
+  {
+    "name": "image-layer-budget",
+    "area": "delivery",
+    "purpose": "Review image-layer sizes against a supplied storage budget.",
+    "limitations": "Compressed and unpacked sizes differ; shared layers and registry deduplication are not modeled."
+  },
+  {
+    "name": "registry-reference-parser",
+    "area": "delivery",
+    "purpose": "Split an explicit registry image reference into repository, tag, and digest fields.",
+    "limitations": "Parses a restricted reference shape; it does not validate the complete OCI name grammar or contact a registry."
+  },
+  {
+    "name": "ci-matrix-expander",
+    "area": "delivery",
+    "purpose": "Expand a bounded Cartesian test matrix from named dimensions.",
+    "limitations": "Does not evaluate include/exclude expressions or CI provider limits beyond the local combination cap."
+  },
+  {
+    "name": "release-manifest-validator",
+    "area": "delivery",
+    "purpose": "Check a normalized release manifest for unique services and immutable image digests.",
+    "limitations": "Checks manifest structure only; digest existence, signatures, compatibility, and deployment approval are separate concerns."
+  },
+  {
+    "name": "readiness-gate-evaluator",
+    "area": "delivery",
+    "purpose": "Evaluate named readiness checks against success and latency criteria.",
+    "limitations": "Evaluates supplied observations; no probes are executed and readiness is not an uptime guarantee."
+  },
+  {
+    "name": "terraform-plan-risk-auditor",
+    "area": "cloud",
+    "purpose": "Summarize destructive actions from Terraform plan JSON.",
+    "limitations": "Consumes plan JSON; does not evaluate unknown values, sensitive data, policy exceptions, or apply resources."
+  },
+  {
+    "name": "aws-security-group-auditor",
+    "area": "cloud",
+    "purpose": "Flag Internet-wide rules exposing SSH, RDP, or all IP protocols.",
+    "limitations": "Static ingress review; routing, NACLs, IPv6 prefix lists, security group references, and reachability are not evaluated."
+  },
+  {
+    "name": "cloud-tag-compliance",
+    "area": "cloud",
+    "purpose": "Find missing ownership and cost allocation tags in resource inventory.",
+    "limitations": "Uses normalized inventory; tagging support, inherited tags, and policy exceptions vary by resource type."
+  },
+  {
+    "name": "cloud-resource-cost-estimator",
+    "area": "cloud",
+    "purpose": "Estimate usage-based cost using rates supplied by the caller.",
+    "limitations": "No live prices or billing guarantees; excludes taxes, discounts, transfer, storage, and other charges unless supplied explicitly."
+  },
+  {
+    "name": "vpc-address-planner",
+    "area": "cloud",
+    "purpose": "Allocate a bounded number of equal-size subnets from a parent IPv4 network.",
+    "limitations": "Does not consult existing allocations or provider constraints; validate against the organization IPAM system."
+  },
+  {
+    "name": "iam-wildcard-auditor",
+    "area": "cloud",
+    "purpose": "Identify wildcard Allow statements requiring an IAM policy review.",
+    "limitations": "Not an IAM authorization evaluator; conditions, Deny statements, SCPs, permission boundaries, and resource policies can alter effective access."
+  },
+  {
+    "name": "s3-public-access-checker",
+    "area": "cloud",
+    "purpose": "Review the four S3 Public Access Block settings in supplied bucket metadata.",
+    "limitations": "Reports settings only, not effective public access. Account-level blocks, ACLs, policies, and access points require separate inspection."
+  },
+  {
+    "name": "terraform-output-redactor",
+    "area": "cloud",
+    "purpose": "Redact outputs marked sensitive in Terraform output JSON.",
+    "limitations": "Relies on correct sensitive metadata; misclassified secrets remain visible and input must be protected."
+  },
+  {
+    "name": "cloud-quota-headroom",
+    "area": "cloud",
+    "purpose": "Calculate quota usage and flag insufficient capacity for planned additions.",
+    "limitations": "Uses a static regional/account snapshot; quota increases, resource release timing, and service limits are not requested."
+  },
+  {
+    "name": "availability-zone-distributor",
+    "area": "cloud",
+    "purpose": "Distribute a desired replica count evenly across supplied zones.",
+    "limitations": "A desired distribution, not a placement scheduler; ignores zonal capacity, stateful topology, and disruption budgets."
+  },
+  {
+    "name": "cloud-budget-forecast",
+    "area": "cloud",
+    "purpose": "Extrapolate period spend using elapsed-day average cost.",
+    "limitations": "Straight-line projection only; does not model credits, seasonality, billing delay, or commitments."
+  },
+  {
+    "name": "ebs-snapshot-retention",
+    "area": "cloud",
+    "purpose": "Plan count-based snapshot retention independently for each volume.",
+    "limitations": "No AWS calls or deletions; AMI dependencies, incomplete snapshots, backup policies, and compliance locks need independent review."
+  },
+  {
+    "name": "terraform-dependency-graph",
+    "area": "cloud",
+    "purpose": "Build reverse dependencies from a normalized resource dependency inventory.",
+    "limitations": "Consumes a normalized graph, not HCL or Terraform graph output; implicit references and cycles require other checks."
+  },
+  {
+    "name": "cloud-idle-resource-finder",
+    "area": "cloud",
+    "purpose": "Find resource observations below a caller-defined utilization threshold.",
+    "limitations": "Low CPU alone does not prove a resource is unused. Check traffic, memory, duty cycle, ownership, and recovery roles."
+  },
+  {
+    "name": "network-egress-cost-planner",
+    "area": "cloud",
+    "purpose": "Estimate transfer cost from explicitly priced network flows.",
+    "limitations": "Rates are example inputs, not live provider prices. Tiers, free allowances, direction, and region affect billing."
+  },
+  {
+    "name": "slo-error-budget-calculator",
+    "area": "reliability",
+    "purpose": "Calculate a request-based error budget and remaining allowance.",
+    "limitations": "Assumes valid events and good/bad classification already defined; fractional budgets are expected with ratio objectives."
+  },
+  {
+    "name": "burn-rate-alert-evaluator",
+    "area": "reliability",
+    "purpose": "Evaluate paired error-ratio windows against one burn-rate threshold.",
+    "limitations": "Requires pre-aggregated windows; no traffic floor, missing-data policy, paging integration, or recording-rule evaluation is implemented."
+  },
+  {
+    "name": "incident-timeline-checker",
+    "area": "reliability",
+    "purpose": "Validate incident event ordering and summarize observed elapsed time.",
+    "limitations": "Examples are exercises, not production incident claims. Event span alone is not necessarily customer-impact duration."
+  },
+  {
+    "name": "alert-deduplication-tool",
+    "area": "reliability",
+    "purpose": "Group alerts by a caller-selected identity label set.",
+    "limitations": "An offline grouping exercise; production alert grouping must preserve routing boundaries and incident semantics."
+  },
+  {
+    "name": "runbook-coverage-auditor",
+    "area": "reliability",
+    "purpose": "Find services missing operational ownership or a runbook URL.",
+    "limitations": "Presence checks only; does not validate URL reachability, ownership currency, or runbook effectiveness."
+  },
+  {
+    "name": "oncall-handoff-builder",
+    "area": "reliability",
+    "purpose": "Assemble an open-item handoff from normalized operational records.",
+    "limitations": "Builds a draft from provided facts only; it does not send messages, contact on-call staff, or invent incidents."
+  },
+  {
+    "name": "recovery-time-analyzer",
+    "area": "reliability",
+    "purpose": "Compare recorded recovery drill durations with a stated recovery-time target.",
+    "limitations": "Uses completed drill observations; sample results do not prove a production RTO or include data-loss measurement."
+  },
+  {
+    "name": "capacity-forecast-tool",
+    "area": "reliability",
+    "purpose": "Extrapolate resource exhaustion from two dated usage observations.",
+    "limitations": "A two-point linear projection with no confidence interval; validate trends and planned changes before buying capacity."
+  },
+  {
+    "name": "prometheus-label-cardinality",
+    "area": "reliability",
+    "purpose": "Estimate series cardinality from independent label value inventories.",
+    "limitations": "Assumes a complete Cartesian product and one series per combination; histograms and correlated labels change the estimate."
+  },
+  {
+    "name": "prometheus-textfile-validator",
+    "area": "reliability",
+    "purpose": "Validate a deliberately small unlabeled Prometheus textfile subset.",
+    "limitations": "Supports unlabeled finite numeric samples only; labels, timestamps, histograms, exemplars, and special values are rejected."
+  },
+  {
+    "name": "prometheus-alert-rule-linter",
+    "area": "reliability",
+    "purpose": "Review normalized alert rules for names, expressions, ownership, and a hold duration.",
+    "limitations": "Does not parse PromQL or replace promtool check rules. Compound and zero durations are intentionally outside this subset."
+  },
+  {
+    "name": "retry-storm-simulator",
+    "area": "reliability",
+    "purpose": "Model worst-case request amplification when every client exhausts retries.",
+    "limitations": "A worst-case count model; no requests are sent. Backoff, jitter, partial success, and time overlap are not simulated."
+  },
+  {
+    "name": "chaos-experiment-planner",
+    "area": "reliability",
+    "purpose": "Review a lab failure-exercise proposal for blast-radius and stop-condition metadata.",
+    "limitations": "Metadata review only; a passing result is not authorization or proof of safety. No fault is injected."
+  },
+  {
+    "name": "service-dependency-impact",
+    "area": "reliability",
+    "purpose": "Find services transitively dependent on a failed component.",
+    "limitations": "Graph reachability indicates potential impact; caches, redundancy, fallbacks, and partial degradation require runtime evidence."
+  },
+  {
+    "name": "postmortem-action-tracker",
+    "area": "reliability",
+    "purpose": "Identify overdue open follow-up actions relative to an explicit date.",
+    "limitations": "Example actions are exercises. The tool does not create issues, assign owners, or verify completion evidence."
+  }
+]

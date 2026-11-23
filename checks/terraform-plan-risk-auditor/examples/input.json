@@ -1,0 +1,21 @@
+{
+  "resource_changes": [
+    {
+      "address": "aws_db_instance.main",
+      "change": {
+        "actions": [
+          "delete",
+          "create"
+        ]
+      }
+    },
+    {
+      "address": "aws_vpc.lab",
+      "change": {
+        "actions": [
+          "no-op"
+        ]
+      }
+    }
+  ]
+}

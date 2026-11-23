@@ -1,0 +1,12 @@
+{
+  "open_items": [
+    {
+      "id": "INC-EXERCISE",
+      "status": "monitoring",
+      "priority": 2
+    }
+  ],
+  "counts_by_status": {
+    "monitoring": 1
+  }
+}

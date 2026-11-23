@@ -1,0 +1,3 @@
+{
+  "text": "# TYPE queue_depth gauge\nqueue_depth 3\nworker_up 1\n"
+}

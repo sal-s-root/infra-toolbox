@@ -1,0 +1,12 @@
+{
+  "outputs": {
+    "vpc_id": {
+      "sensitive": false,
+      "value": "vpc-example"
+    },
+    "password": {
+      "sensitive": true,
+      "value": "example-only"
+    }
+  }
+}

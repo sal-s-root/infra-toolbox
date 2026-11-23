@@ -1,0 +1,3 @@
+{
+  "passwd": "root:x:0:0:root:/root:/bin/sh\nadmin:x:0:0:admin:/home/admin:/bin/sh"
+}

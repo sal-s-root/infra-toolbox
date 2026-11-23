@@ -1,0 +1,9 @@
+{
+  "findings": [
+    {
+      "path": "config",
+      "extra_permission_bits": "0026"
+    }
+  ],
+  "within_policy": false
+}

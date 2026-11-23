@@ -1,0 +1,10 @@
+{
+  "flows": [
+    {
+      "name": "internet-egress",
+      "estimated_cost": 9.0
+    }
+  ],
+  "estimated_total": 9.0,
+  "currency": "USD"
+}

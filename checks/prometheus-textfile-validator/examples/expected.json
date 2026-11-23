@@ -1,0 +1,7 @@
+{
+  "metrics": {
+    "queue_depth": 3.0,
+    "worker_up": 1.0
+  },
+  "count": 2
+}

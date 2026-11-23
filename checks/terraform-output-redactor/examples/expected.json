@@ -1,0 +1,6 @@
+{
+  "outputs": {
+    "password": "[REDACTED]",
+    "vpc_id": "vpc-example"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "hosts": [
+    "web1",
+    "db1"
+  ],
+  "groups": {
+    "web": [
+      "web1",
+      "old1"
+    ]
+  }
+}

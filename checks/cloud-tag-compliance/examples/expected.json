@@ -1,0 +1,11 @@
+{
+  "findings": [
+    {
+      "resource": "vpc-example",
+      "missing_tags": [
+        "CostCenter"
+      ]
+    }
+  ],
+  "compliant": false
+}

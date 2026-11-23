@@ -1,0 +1,6 @@
+{
+  "availability_percent": 99.95,
+  "allowed_failures": 10.0,
+  "remaining_failures": 5.0,
+  "budget_exhausted": false
+}

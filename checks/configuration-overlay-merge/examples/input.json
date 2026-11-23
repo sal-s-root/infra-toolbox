@@ -1,0 +1,19 @@
+{
+  "base": {
+    "api": {
+      "port": 8080,
+      "workers": 2
+    },
+    "zones": [
+      "a"
+    ]
+  },
+  "overlay": {
+    "api": {
+      "workers": 4
+    },
+    "zones": [
+      "b"
+    ]
+  }
+}
